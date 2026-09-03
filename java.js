@@ -111,3 +111,85 @@ function closeAccess() {
     if (e.key === 'Escape') { closeAccess(); closeLightbox(); }
   });
 })();
+
+/* ============================================================
+   Efeitos de scroll (vanilla, sem biblioteca)
+   ============================================================ */
+(function () {
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Barra de progresso no topo ---------- */
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  var header = document.querySelector('header.top');
+  var ticking = false;
+
+  function onScroll() {
+    var doc = document.documentElement;
+    var scrolled = doc.scrollTop || document.body.scrollTop;
+    var height = doc.scrollHeight - doc.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    progress.style.width = pct + '%';
+
+    if (header) header.classList.toggle('scrolled', scrolled > 24);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+  onScroll();
+
+  /* ---------- Reveal das seções (fade + slide-up) ---------- */
+  var targets = document.querySelectorAll(
+    'section, .strip, footer, .feat, .step, .proof, .mini-feature, .app-photo, .audience-list > div'
+  );
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('in-view'); });
+  } else {
+    targets.forEach(function (el) { el.classList.add('reveal'); });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Scroll suave nas âncoras (#comprar etc.) ---------- */
+  function headerOffset() {
+    var bar = document.querySelector('.sticky-bar');
+    var h = header ? header.getBoundingClientRect().height : 0;
+    var b = bar ? bar.getBoundingClientRect().height : 0;
+    return h + b + 12;
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+      window.scrollTo({
+        top: top,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+      if (history.replaceState) history.replaceState(null, '', id);
+    });
+  });
+})();

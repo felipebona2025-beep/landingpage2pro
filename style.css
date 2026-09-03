@@ -97,8 +97,19 @@ header.top{
   position:sticky;top:39px;z-index:50;
   background:rgba(6,8,10,.82);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
+  transition:background .25s ease,box-shadow .25s ease,border-color .25s ease;
 }
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+header.top .wrap{
+  display:flex;align-items:center;justify-content:space-between;height:64px;
+  transition:height .25s ease;
+}
+header.top.scrolled{
+  background:rgba(6,8,10,.96);
+  border-bottom-color:rgba(201,247,59,.22);
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+header.top.scrolled .wrap{height:54px;}
+header.top.scrolled .brand{font-size:.98rem;}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--arch);font-weight:800;font-size:1.05rem;}
 .brand-mark{
   width:30px;height:30px;border-radius:9px;
@@ -516,6 +527,34 @@ footer div{font-size:.82rem;color:var(--muted);}
 }
 
 /* ============================================================
+   Efeitos de scroll
+   ============================================================ */
+.scroll-progress{
+  position:fixed;top:0;left:0;z-index:120;
+  height:3px;width:0;
+  background:linear-gradient(90deg,var(--volt),var(--teal));
+  box-shadow:0 0 10px rgba(201,247,59,.5);
+  transition:width .1s linear;
+  pointer-events:none;
+}
+
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1);
+  will-change:opacity,transform;
+}
+.reveal.in-view{opacity:1;transform:none;}
+
+/* elementos em grade entram escalonados */
+.feat.reveal,.step.reveal,.proof.reveal,.mini-feature.reveal,
+.app-photo.reveal,.audience-list > div.reveal{transition-delay:.05s;}
+.feat.reveal:nth-child(2),.step.reveal:nth-child(2),.proof.reveal:nth-child(2){transition-delay:.12s;}
+.feat.reveal:nth-child(3),.step.reveal:nth-child(3),.proof.reveal:nth-child(3){transition-delay:.19s;}
+.feat.reveal:nth-child(4),.proof.reveal:nth-child(4){transition-delay:.26s;}
+.feat.reveal:nth-child(5){transition-delay:.33s;}
+.feat.reveal:nth-child(6){transition-delay:.4s;}
+
+/* ============================================================
    Responsivo
    ============================================================ */
 @media (max-width:920px){
@@ -539,4 +578,6 @@ footer div{font-size:.82rem;color:var(--muted);}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
   html{scroll-behavior:auto;}
+  .reveal{opacity:1!important;transform:none!important;}
+  .scroll-progress{display:none;}
 }

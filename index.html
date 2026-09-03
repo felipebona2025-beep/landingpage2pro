@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NutriCoach AI — Organize sua alimentação e seus treinos em um só lugar</title>
+<meta name="description" content="Organize alimentação, treinos, calorias e progresso em um único app. Acesso completo por R$ 27,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon-512.png" type="image/png">
+</head>
+<body>
+
+<!-- barra de oferta -->
+<div class="sticky-bar">
+  <span class="sb-dot"></span>
+  <span class="sb-label">Oferta ativa · termina em</span>
+  <span class="sb-time"><span id="cdH2">00</span>:<span id="cdM2">00</span>:<span id="cdS2">00</span></span>
+</div>
+
+<!-- header -->
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#C9F73B" stroke-width="2" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>NutriCoach AI</div>
+    <a class="top-cta" href="#comprar">Começar agora</a>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero hero-dark">
+  <span class="spark" style="left:6%;top:18%;animation-delay:.2s"></span>
+  <span class="spark" style="left:13%;top:62%;animation-delay:1.4s"></span>
+  <span class="spark" style="left:22%;top:38%;animation-delay:2.6s"></span>
+  <span class="spark" style="left:34%;top:78%;animation-delay:.8s"></span>
+  <span class="spark" style="left:48%;top:14%;animation-delay:3.2s"></span>
+  <span class="spark" style="left:61%;top:52%;animation-delay:1.9s"></span>
+  <span class="spark" style="left:73%;top:22%;animation-delay:.5s"></span>
+  <span class="spark" style="left:84%;top:66%;animation-delay:2.2s"></span>
+  <span class="spark" style="left:91%;top:34%;animation-delay:3.8s"></span>
+  <span class="spark" style="left:9%;top:88%;animation-delay:1.1s"></span>
+  <span class="spark" style="left:55%;top:84%;animation-delay:2.9s"></span>
+  <span class="spark" style="left:78%;top:88%;animation-delay:.1s"></span>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Nutrição + Treino em um só app</span>
+      <h1>Pare de tentar organizar tudo na cabeça — <span class="hl">deixe o app fazer isso.</span></h1>
+      <p class="sub">Monte seu ponto de partida, registre refeições e treinos, acompanhe calorias e veja seu progresso em um painel simples. Você pode ajustar o plano conforme sua rotina muda.</p>
+      <div class="hero-cta">
+        <a class="btn-buy" href="#comprar">Garantir meu acesso — R$ 27,90
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <button class="btn-ghost" onclick="openAccess()">Já tenho acesso</button>
+      </div>
+      <div class="trust">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+        Pagamento único · Sem mensalidade · 7 dias de garantia
+      </div>
+    </div>
+
+    <div class="phone-stage">
+      <div class="phone-glow"></div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="pm-top">
+            <div class="pm-b"><span class="m"><svg viewBox="0 0 24 24" fill="none" stroke="#C9F73B" stroke-width="2" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>NutriCoach AI</div>
+            <span class="pm-streak">🔥 7</span>
+          </div>
+          <div class="pm-body">
+            <div class="pm-hi">Bora começar 👋</div>
+            <div class="pm-sub">Seu painel · hoje</div>
+            <div class="pm-card">
+              <div class="k">OBJETIVO PRINCIPAL</div>
+              <div class="pm-row"><span class="pm-goal">Plano personalizado</span>
+                <svg width="42" height="42" viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6"/><circle cx="28" cy="28" r="24" fill="none" stroke="#A8DB1E" stroke-width="6" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="52" transform="rotate(-90 28 28)"/><text x="28" y="32" text-anchor="middle" font-size="11" fill="#EDEFF3" font-family="Archivo" font-weight="800">65%</text></svg>
+              </div>
+              <div class="pm-stats"><div class="s"><div class="n">1.740</div><div class="l">KCAL</div></div><div class="s"><div class="n">68%</div><div class="l">HOJE</div></div></div>
+            </div>
+            <div class="pm-nutri">
+              <div class="h"><b>Nutrição de hoje</b><span>1740 / 2680</span></div>
+              <div class="pm-macros">
+                <svg width="56" height="56" viewBox="0 0 70 70"><circle cx="35" cy="35" r="30" fill="none" stroke="#E4E7EC" stroke-width="8"/><circle cx="35" cy="35" r="30" fill="none" stroke="#A8DB1E" stroke-width="8" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="66" transform="rotate(-90 35 35)"/><text x="35" y="39" text-anchor="middle" font-size="13" font-family="Archivo" font-weight="800" fill="#14161C">1740</text></svg>
+                <div style="flex:1">
+                  <div class="bar"><div class="bl"><span>Proteína</span><span>112/165g</span></div><div class="bt"><div class="bf" style="width:68%;background:#17BEBB"></div></div></div>
+                  <div class="bar"><div class="bl"><span>Carbo</span><span>210/320g</span></div><div class="bt"><div class="bf" style="width:66%;background:#8FBF00"></div></div></div>
+                  <div class="bar"><div class="bl"><span>Gordura</span><span>48/74g</span></div><div class="bt"><div class="bf" style="width:64%;background:#FFB020"></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- proof strip -->
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20c-3 0-5-3-5-7s2-6 5-6 5 2 5 6-2 7-5 7z"/><path d="M12 7V4"/></svg><b>Dieta</b> editável</div>
+    <div class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5 17.5 17.5M3 8v8M6 5v14M18 5v14M21 8v8"/></svg><b>Treinos</b> por dia</div>
+    <div class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg><b>Progresso</b> real</div>
+    <div class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><b>Calorias</b> na hora</div>
+    <div class="item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9M3 15l4-4 4 4 4-6 6 6"/></svg><b>Fotos</b> de evolução</div>
+  </div>
+</div>
+
+<!-- dor / identificação do problema -->
+<section>
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="sec-eyebrow">Você reconhece isso?</div>
+      <h2 style="margin:0 auto">Cansado de recomeçar toda segunda-feira?</h2>
+      <p class="sec-lead" style="margin-left:auto;margin-right:auto;">Planilha que ninguém atualiza, treino sem acompanhamento, dieta que você perde o fio depois de 3 dias. Não é falta de vontade — é falta de um lugar só pra organizar tudo.</p>
+    </div>
+    <div class="audience-list pain-list">
+      <div><span>📋</span> Planilha de dieta que você esquece de preencher depois do 3º dia</div>
+      <div><span>🍽️</span> Não sabe se a refeição de hoje bateu a meta de calorias e proteína</div>
+      <div><span>📉</span> Treina sem registrar nada — e sem saber se está evoluindo de verdade</div>
+      <div><span>🔄</span> Já baixou uns 3 apps diferentes e nunca criou o hábito de usar nenhum</div>
+    </div>
+  </div>
+</section>
+
+<!-- product showcase -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="showcase-head">
+      <div>
+        <div class="sec-eyebrow">A solução</div>
+        <h2>Um painel simples para acompanhar o que importa.</h2>
+      </div>
+      <p class="sec-lead">A ideia é tirar a bagunça de planilhas e anotações e colocar alimentação, treino e progresso no mesmo lugar.</p>
+    </div>
+
+    <div class="showcase-grid">
+      <div class="showcase-card showcase-main">
+        <div class="showcase-browser">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="demo-dashboard">
+          <div class="demo-top">
+            <div>
+              <small>PAINEL DE HOJE</small>
+              <strong>Seu progresso</strong>
+            </div>
+            <span class="demo-pill">● sincronizado</span>
+          </div>
+          <div class="demo-metrics">
+            <div><small>CALORIAS</small><b>1.740</b><span>de 2.680 kcal</span></div>
+            <div><small>PROTEÍNA</small><b>112 g</b><span>de 165 g</span></div>
+            <div><small>TREINO</small><b>Treino A</b><span>próxima atividade</span></div>
+          </div>
+          <div class="demo-chart">
+            <div class="chart-head"><b>Atividade da semana</b><span>Últimos 7 dias</span></div>
+            <div class="chart-bars">
+              <i style="height:38%"></i><i style="height:62%"></i><i style="height:48%"></i>
+              <i style="height:82%"></i><i style="height:57%"></i><i style="height:92%"></i><i style="height:70%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-side">
+        <div class="mini-feature">
+          <div class="mini-icon">01</div>
+          <div><h3>Plano editável</h3><p>Troque refeições e exercícios para adaptar o plano à sua rotina.</p></div>
+        </div>
+        <div class="mini-feature">
+          <div class="mini-icon">02</div>
+          <div><h3>Acompanhamento</h3><p>Registre refeições, atividades e evolução sem depender de planilhas.</p></div>
+        </div>
+        <div class="mini-feature">
+          <div class="mini-icon">03</div>
+          <div><h3>Sincronização</h3><p>Acesse pelo celular ou computador e mantenha sua conta organizada.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- app photos -->
+<section class="app-gallery" id="fotos-app">
+  <div class="wrap">
+    <div class="showcase-head">
+      <div>
+        <div class="sec-eyebrow">Por dentro do app</div>
+        <h2>Veja sua rotina ficando mais simples.</h2>
+      </div>
+      <p class="sec-lead">Seis telas, um objetivo: você abrir o app e saber exatamente onde está — sem planilha, sem anotação solta.</p>
+    </div>
+
+    <div class="app-gallery-grid">
+      <figure class="app-photo app-photo-tall" tabindex="0" role="button" aria-label="Ampliar painel de hoje">
+        <img src="imagensapppt2/inicio.jpeg" alt="Tela inicial do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 01</span><small>imagens-app/telainicial.png</small></div>
+        <figcaption>Painel de hoje</figcaption>
+      </figure>
+      <figure class="app-photo" tabindex="0" role="button" aria-label="Ampliar alimentação organizada">
+        <img src="imagensapppt2/dieta.jpeg" alt="Tela de alimentação do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 02</span><small>imagens-app/teladieta.png</small></div>
+        <figcaption>Alimentação organizada</figcaption>
+      </figure>
+      <figure class="app-photo" tabindex="0" role="button" aria-label="Ampliar tempo de exercícios">
+        <img src="imagensapppt2/treino.jpeg" alt="Tela de treino do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 03</span><small>imagens-app/telatreino.png</small></div>
+        <figcaption>Seu treino</figcaption>
+      </figure>
+      <figure class="app-photo" tabindex="0" role="button" aria-label="Ampliar seu progresso">
+        <img src="imagensapppt2/progresso.jpeg" alt="Tela de progresso do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 04</span><small>imagens-app/telaprogresso.png</small></div>
+        <figcaption>Seu progresso</figcaption>
+      </figure>
+      <figure class="app-photo" tabindex="0" role="button" aria-label="Ampliar registrar">
+        <img src="imagensapppt2/registro.jpeg" alt="Tela de registro do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 05</span><small>imagens-app/telaregistro.png</small></div>
+        <figcaption>Registrar</figcaption>
+      </figure>
+      <figure class="app-photo" tabindex="0" role="button" aria-label="Ampliar ranking">
+        <img src="imagensapppt2/ranking.jpeg" alt="Plano semanal do NutriCoach AI" loading="lazy" onload="this.classList.add('loaded')" onerror="this.classList.add('failed')">
+        <div class="app-photo-placeholder"><span>Foto 06</span><small>imagens-app/telaranking.png</small></div>
+        <figcaption>Ranking</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- features -->
+<section id="recursos">
+  <div class="wrap">
+    <div class="sec-eyebrow">O que você recebe</div>
+    <h2>Tudo que você precisa pra organizar dieta e treino, num app só.</h2>
+    <p class="sec-lead">Nada de planilha, nada de app gringo confuso. Feito com comida brasileira e linguagem que você entende.</p>
+
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 7h10c0-2 2-4 2-7a7 7 0 0 0-7-7z"/><path d="M9 21h6"/></svg></div>
+        <h3>Plano inteligente</h3>
+        <p>Responda um quiz rápido e receba uma sugestão de dieta e treino organizada para seu objetivo — perder gordura, ganhar massa ou manter.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Se ajusta ao seu peso</h3>
+        <p>Registrou uma mudança de peso? O app pode atualizar suas referências de calorias e macros conforme os dados registrados mudam.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Calorias na hora</h3>
+        <p>Digite o alimento ou registre o alimento. O app ajuda a estimar calorias, proteína e carboidrato — com comida brasileira de verdade.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div>
+        <h3>Dieta e treino editáveis</h3>
+        <p>Não gostou de uma refeição ou exercício? Troque, adicione, remova. O plano é seu — molde do seu jeito.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9M3 15l4-4 4 4 4-6 6 6"/><circle cx="8" cy="9" r="1.4"/></svg></div>
+        <h3>Fotos de evolução</h3>
+        <p>Registre fotos do seu progresso e guarde sua linha do tempo. A transformação fica visível, não só no número da balança.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Salvo na nuvem</h3>
+        <p>Sua conta funciona no celular e no computador ao mesmo tempo. Tudo sincronizado, seus dados sempre com você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- how it works -->
+<section style="background:rgba(255,255,255,.015);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-eyebrow">Como funciona</div>
+    <h2>Comece em poucos minutos e organize sua rotina.</h2>
+    <div class="steps">
+      <div class="step"><h3>Responda o quiz</h3><p>Idade, peso, objetivo, quantos dias treina. Rápido e direto.</p></div>
+      <div class="step"><h3>Receba seu plano</h3><p>Receba uma sugestão inicial de dieta e treino baseada nas informações que você forneceu.</p></div>
+      <div class="step"><h3>Acompanhe e evolua</h3><p>Registre refeições e peso. Você registra sua rotina e acompanha seu progresso no painel.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- audience -->
+<section class="audience">
+  <div class="wrap">
+    <div class="audience-grid">
+      <div>
+        <div class="sec-eyebrow">Para quem é</div>
+        <h2>Para quem quer parar de improvisar a própria rotina.</h2>
+        <p class="sec-lead">O NutriCoach AI funciona como uma ferramenta de organização e acompanhamento. Você define suas informações e usa o app para manter tudo em um só lugar.</p>
+      </div>
+      <div class="audience-list">
+        <div><span>✓</span> Quer organizar alimentação e treinos</div>
+        <div><span>✓</span> Gosta de acompanhar calorias e refeições</div>
+        <div><span>✓</span> Quer registrar evolução e atividades</div>
+        <div><span>✓</span> Prefere acessar tudo pelo celular ou PC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- prova social honesta -->
+<section class="proof-sec">
+  <div class="wrap">
+    <div style="text-align:center"><div class="sec-eyebrow">Por que confiar</div><h2 style="margin:0 auto">Um app de verdade, feito pra quem é do Brasil.</h2></div>
+    <div class="proof-grid">
+      <div class="proof"><div class="proof-ic">🇧🇷</div><h3>Comida brasileira</h3><p>Nada de app gringo. Aqui tem coxinha, açaí, feijoada e as marcas que você come de verdade.</p></div>
+      <div class="proof"><div class="proof-ic">⚡</div><h3>Plano que se ajusta</h3><p>Seu peso muda, o plano recalcula sozinho. Você nunca fica seguindo uma dieta desatualizada.</p></div>
+      <div class="proof"><div class="proof-ic">🔒</div><h3>Seus dados seguros</h3><p>Conta protegida, sincronizada na nuvem. Seus dados só seus, no celular e no PC.</p></div>
+      <div class="proof"><div class="proof-ic">♾️</div><h3>Pague uma vez</h3><p>Sem mensalidade, sem pegadinha. Um pagamento e você não precisa manter uma assinatura mensal.</p></div>
+    </div>
+
+    <!-- ============================================================
+         DEPOIMENTOS — IMPORTANTE, LEIA:
+         Deixe esta seção ASSIM até ter clientes REAIS.
+         Quando alguém comprar de verdade, peça um print ou uma frase
+         (com permissão da pessoa) e substitua os itens abaixo pelos
+         depoimentos verdadeiros. NUNCA invente depoimentos — além de
+         ser propaganda enganosa (crime, art. 37 do CDC), queima a
+         confiança. Depoimento real converte muito mais.
+         Enquanto não tiver, a seção fica escondida (display:none abaixo).
+         Para mostrar, troque  style="display:none"  por  style="display:block"
+         e preencha os cards com prints/frases reais.
+         ============================================================ -->
+    <div class="testimonials" style="display:none">
+      <h3 class="testi-title">O que estão dizendo</h3>
+      <div class="testi-grid">
+        <!-- COLE_AQUI_DEPOIMENTO_REAL_1 (foto/print + nome + frase) -->
+        <!-- COLE_AQUI_DEPOIMENTO_REAL_2 -->
+        <!-- COLE_AQUI_DEPOIMENTO_REAL_3 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- garantia -->
+<section style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="sec-eyebrow">Sem risco pra você</div>
+      <h2 style="margin:0 auto">7 dias de garantia incondicional.</h2>
+    </div>
+    <div class="guarantee-card">
+      <div class="guarantee-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <h3>Reembolso garantido por lei</h3>
+        <p>Se em até 7 dias corridos você achar que o NutriCoach AI não é pra você, basta pedir o reembolso. É um direito seu em compras feitas pela internet, garantido pelo Código de Defesa do Consumidor (art. 49) — sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- price -->
+<section class="price-sec" id="comprar">
+  <div class="wrap">
+    <div style="text-align:center">
+      <div class="sec-eyebrow">Acesso completo</div>
+      <h2 style="margin:0 auto">Acesso completo sem mensalidade.</h2>
+    </div>
+    <div class="price-card">
+      <span class="price-tag">Oferta de lançamento</span>
+
+      <div class="price-was"><span class="pw-old">R$ 47</span></div>
+      <span class="cd-label" style="display:block;margin-bottom:6px;">Hoje por apenas</span>
+      <div class="price-val"><span class="c">R$</span><span class="n">27</span><span class="cents">,90</span></div>
+      <div class="price-once">pagamento único · sem mensalidade</div>
+      <ul class="price-list">
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Plano de dieta e treino personalizado</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Ajuste automático conforme seu peso muda</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Contador de calorias com comida brasileira</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Fotos de progresso e acompanhamento</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Sincroniza no celular e no PC</li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>7 dias de garantia incondicional</li>
+      </ul>
+      <a class="btn-buy" href="https://pay.cakto.com.br/5qtp3gz_1050145">
+  Garantir meu acesso agora
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</a>
+      <div class="price-trust-row">
+        <span>🛡️ 7 dias de garantia</span>
+        <span>🔒 Pagamento seguro</span>
+        <span>⚡ Acesso imediato</span>
+      </div>
+      <div class="price-note">Pagamento processado pela Cakto · Pix ou cartão</div>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section>
+  <div class="wrap">
+    <div style="text-align:center"><div class="sec-eyebrow">Dúvidas</div><h2 style="margin:0 auto">Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details class="qa"><summary>Como recebo o acesso depois de pagar?<span class="plus">+</span></summary><p>Assim que o pagamento é confirmado, seu acesso é liberado automaticamente. É só entrar no app com o mesmo e-mail que você usou na compra — funciona no navegador do celular ou do computador, sem baixar nada de loja.</p></details>
+      <details class="qa"><summary>Preciso pagar todo mês?<span class="plus">+</span></summary><p>Não. É um pagamento único. Você paga uma vez e tem acesso vitalício, incluindo as atualizações que forem chegando.</p></details>
+      <details class="qa"><summary>E se eu me arrepender da compra?<span class="plus">+</span></summary><p>Você tem 7 dias corridos de garantia a partir da compra, conforme o Código de Defesa do Consumidor (art. 49) para compras feitas pela internet. Basta solicitar o reembolso dentro desse prazo.</p></details>
+      <details class="qa"><summary>Funciona no meu celular?<span class="plus">+</span></summary><p>Sim. Funciona em qualquer celular ou computador pelo navegador, e dá até pra instalar como app na tela inicial. Sua conta sincroniza entre os aparelhos.</p></details>
+      <details class="qa"><summary>O app substitui um nutricionista?<span class="plus">+</span></summary><p>Não. O NutriCoach AI é uma ferramenta de acompanhamento e organização. As estimativas de calorias e os cálculos são baseados em fórmulas gerais e servem de orientação. Para necessidades específicas de saúde, procure sempre um nutricionista ou médico.</p></details>
+      <details class="qa"><summary>Posso editar a dieta e os treinos?<span class="plus">+</span></summary><p>Totalmente. Você troca refeições, ajusta exercícios, adiciona ou remove o que quiser. O plano é um ponto de partida que você molda do seu jeito.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- final cta -->
+<section class="final">
+  <div class="wrap">
+    <h2 style="max-width:14em">Comece a organizar sua rotina hoje.</h2>
+    <a class="btn-buy" href="#comprar">Garantir meu acesso — R$ 27,90
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div style="margin-top:16px"><button class="btn-ghost" onclick="openAccess()">Já sou aluno — entrar</button></div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#C9F73B" stroke-width="2" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>NutriCoach AI</div>
+    <div>© 2026 NutriCoach AI</div>
+  </div>
+  <div class="wrap"><p class="foot-disc">O NutriCoach AI é uma ferramenta de organização e acompanhamento de dieta e treino. As estimativas nutricionais são aproximadas e baseadas em fórmulas gerais, não substituindo a orientação de um nutricionista, médico ou profissional de educação física. Consulte um profissional de saúde antes de iniciar qualquer dieta ou programa de exercícios.</p></div>
+</footer>
+
+<!-- access modal -->
+<div class="ov" id="accessOv">
+  <div class="ov-card">
+    <button class="ov-x" onclick="closeAccess()">✕</button>
+    <h3>Entrar no app</h3>
+    <p>Já comprou? Entre no app com o <b>mesmo e-mail</b> que você usou na compra. O acesso é liberado automaticamente.</p>
+    <a class="btn-buy" id="goAppBtn" href="https://nutricoachai-br.vercel.app" target="_blank" rel="noopener" style="display:inline-flex;justify-content:center;width:100%;text-decoration:none">Abrir o app</a>
+    <p style="margin-top:14px;margin-bottom:0;font-size:12.5px;">Ainda não comprou? <a href="https://pay.cakto.com.br/5qtp3gz_1050145" style="color:var(--volt-deep);font-weight:600">Garanta seu acesso por R$ 27,90</a></p>
+  </div>
+</div>
+<div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Visualização da foto" aria-hidden="true">
+  <button class="photo-lightbox-close" type="button" aria-label="Fechar foto">✕</button>
+  <img id="lightboxImage" src="" alt="">
+</div>
+<script src="java.js"></script>
+</body>
+</html>
