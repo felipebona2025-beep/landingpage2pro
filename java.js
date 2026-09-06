@@ -149,7 +149,8 @@ function closeAccess() {
 
   /* ---------- Reveal das seções (fade + slide-up) ---------- */
   var targets = document.querySelectorAll(
-    'section, .strip, footer, .feat, .step, .proof, .mini-feature, .app-photo, .audience-list > div'
+    'section, .strip, footer, .feat, .step, .proof, .mini-feature, .app-photo, .audience-list > div, ' +
+    '.showcase-card, .guarantee-card, .price-card, .qa, .demo-metrics > div, .item'
   );
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
